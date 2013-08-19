@@ -8,6 +8,7 @@
 #include "point.h"
 #include "line.h"
 #include "polygon.h"
+#include "fill.h"
 using namespace std;
 
 int win_width = 512;
@@ -48,6 +49,11 @@ void display( void ){
 	polygon_t sq(4,sqr);
 	sq.setBorderColor(color);
 	sq.drawPolygon();
+
+	color_t cl(0.5,0.5,0.0);  
+	fill_t f(cl,true); // color and solid=true
+	//f.draw(150,150);
+
 	glutSwapBuffers();
 
 	
